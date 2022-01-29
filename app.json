@@ -1,5 +1,5 @@
 {
-  "name": "PageSpeed Insights fetcher",
+  "name": "page-speed-insights-fetcher",
   "description": "A ruby script that fetches PSI data for your URLs to Firestore",
   "repository": "https://github.com/makaroni4/page_speed_insights_fetcher",
   "keywords": ["PSI", "PageSpeedInsights", "dashboard"],
