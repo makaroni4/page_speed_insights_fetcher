@@ -48,7 +48,7 @@ def persist(url, device_type, report_data)
   url_report = reports_collection.doc(parametrize(url)).set({
     original_url: url,
     device_type => {
-      Time.now => report_data
+      Time.now.utc => report_data
     }
   }, merge: true)
 end
@@ -121,3 +121,5 @@ end
   # 25,000 requests / day and 1 requests / second
   sleep(2)
 end
+
+puts "--> Done and dusted 🍻"
