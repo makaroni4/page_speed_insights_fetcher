@@ -1,0 +1,13 @@
+require "google/cloud/firestore"
+require "byebug"
+require "pp"
+
+firestore = Google::Cloud::Firestore.new(
+  project_id: "page-speed-insights-db",
+  credentials: "./google-api-key.json"
+)
+
+cities_ref = firestore.col("pages")
+cities_ref.get do |page|
+  puts "#{page.document_id} data: #{page.data}."
+end
