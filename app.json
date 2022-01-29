@@ -1,0 +1,22 @@
+{
+  "name": "PageSpeed Insights fetcher",
+  "description": "A ruby script that fetches PSI data for your URLs to Firestore",
+  "repository": "https://github.com/makaroni4/page_speed_insights_fetcher",
+  "keywords": ["PSI", "PageSpeedInsights", "dashboard"],
+  "env": {
+    "GOOGLE_API_KEY_JSON": {
+      "description": "A private SSH key you've generated"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/debitoor/ssh-private-key-buildpack.git"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "addons": [
+    "scheduler"
+  ]
+}
