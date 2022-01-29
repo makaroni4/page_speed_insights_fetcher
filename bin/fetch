@@ -11,6 +11,13 @@ require "date"
 FIRESTORE_DB_ID = "page-speed-insights-db"
 BASE_URL = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
 PSI_DEVICE_TYPES = %w(mobile desktop)
+CREDENTIALS_JSON_FILE = "google-api-key.json"
+
+unless File.exist?(CREDENTIALS_JSON_FILE)
+  File.open(CREDENTIALS_JSON_FILE, "w") do |file|
+    file.puts(ENV["GOOGLE_API_KEY_JSON"])
+  end
+end
 
 @firestore = Google::Cloud::Firestore.new(
   project_id: FIRESTORE_DB_ID,

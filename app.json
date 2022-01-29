@@ -5,7 +5,7 @@
   "keywords": ["PSI", "PageSpeedInsights", "dashboard"],
   "env": {
     "GOOGLE_API_KEY_JSON": {
-      "description": "A private SSH key you've generated"
+      "description": "Your JSON credentials for reading/writing data to Firestore."
     }
   },
   "buildpacks": [
